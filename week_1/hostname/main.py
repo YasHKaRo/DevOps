@@ -14,7 +14,7 @@ def find_host():
     return os.read(hostname, 256)
 def find_IP():
     hostname = socket.gethostname()
-    return print(socket.gethostbyaddr(hostname))
+    return print(socket.gethostbyaddr(hostname)[2])
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     answer()
