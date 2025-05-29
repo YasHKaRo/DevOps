@@ -6,11 +6,13 @@ import os
 
 
 def answer():
-    print(find_host(), os.environ.get("AUTHOR", "AUTHOR-а нет, увы"))
+    print(find_host(), find_IP, os.environ.get("AUTHOR", "AUTHOR-а нет, увы"))
 
 def find_host():
     hostname = os.open("/etc/hostname", 0)
     return os.read(hostname, 256)
+def find_IP():
+    os.popen("hostname -I").read().split()
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     answer()
