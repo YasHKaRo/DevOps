@@ -1,4 +1,5 @@
 import os
+import socket
 # This is a sample Python script.
 
 # Press Shift+F10 to execute it or replace it with your code.
@@ -12,7 +13,7 @@ def find_host():
     hostname = os.open("/etc/hostname", 0)
     return os.read(hostname, 256)
 def find_IP():
-    os.popen("hostname -I").read().split()
+    return os.popen("hostname -I").read().split()
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     answer()
