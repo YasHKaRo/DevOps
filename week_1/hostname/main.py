@@ -7,7 +7,7 @@ import socket
 
 
 def answer():
-    print(find_host(), find_IP, os.environ.get("AUTHOR", "AUTHOR-а нет, увы"))
+    print(find_host(), socket.AddressInfo, socket.gethostbyaddr(find_host()[2:8]) , os.environ.get("AUTHOR", "AUTHOR-а нет, увы"))
 
 def find_host():
     hostname = os.open("/etc/hostname", 0)
