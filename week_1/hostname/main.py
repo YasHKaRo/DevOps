@@ -13,7 +13,8 @@ def find_host():
     hostname = os.open("/etc/hostname", 0)
     return os.read(hostname, 256)
 def find_IP():
-    return print(socket.gethostbyaddr(find_host()[2:8]))
+    hostname = os.open("/etc/hostname", 0)
+    return print(socket.gethostbyaddr(hostname[2:8]))
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     answer()
